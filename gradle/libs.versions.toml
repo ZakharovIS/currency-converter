@@ -1,0 +1,40 @@
+[versions]
+agp = "8.3.2"
+kotlin = "1.9.10"
+coreKtx = "1.13.1"
+junit = "4.13.2"
+junitVersion = "1.2.1"
+espressoCore = "3.6.1"
+appcompat = "1.7.0"
+material = "1.12.0"
+activity = "1.9.0"
+constraintlayout = "2.1.4"
+dagger-android = "2.48.1"
+ksp = "1.9.10-1.0.13"
+moshi = "1.14.0"
+retrofit = "2.9.0"
+
+[libraries]
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+dagger-android = { module = "com.google.dagger:dagger-android", version.ref = "dagger-android" }
+dagger-compiler = { module = "com.google.dagger:dagger-compiler", version.ref = "dagger-android" }
+retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
+moshi-kotlin = { module = "com.squareup.moshi:moshi-kotlin", version.ref = "moshi" }
+moshi = { module = "com.squareup.moshi:moshi", version.ref = "moshi" }
+moshi-ksp = {module = "com.squareup.moshi:moshi-kotlin-codegen", version.ref = "moshi"}
+converter-moshi = { module = "com.squareup.retrofit2:converter-moshi", version.ref = "retrofit" }
+
+[bundles]
+retrofit-moshi = ["retrofit", "moshi", "moshi-kotlin", "converter-moshi", "moshi-ksp"]
+
+[plugins]
+androidApplication = { id = "com.android.application", version.ref = "agp" }
+jetbrainsKotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
