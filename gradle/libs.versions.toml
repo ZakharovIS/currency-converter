@@ -13,6 +13,10 @@ dagger-android = "2.48.1"
 ksp = "1.9.10-1.0.13"
 moshi = "1.14.0"
 retrofit = "2.9.0"
+legacySupportV4 = "1.0.0"
+lifecycleLivedataKtx = "2.8.3"
+lifecycleViewmodelKtx = "2.8.3"
+fragmentKtx = "1.8.1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -30,6 +34,10 @@ moshi-kotlin = { module = "com.squareup.moshi:moshi-kotlin", version.ref = "mosh
 moshi = { module = "com.squareup.moshi:moshi", version.ref = "moshi" }
 moshi-ksp = {module = "com.squareup.moshi:moshi-kotlin-codegen", version.ref = "moshi"}
 converter-moshi = { module = "com.squareup.retrofit2:converter-moshi", version.ref = "retrofit" }
+androidx-legacy-support-v4 = { group = "androidx.legacy", name = "legacy-support-v4", version.ref = "legacySupportV4" }
+androidx-lifecycle-livedata-ktx = { group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", version.ref = "lifecycleLivedataKtx" }
+androidx-lifecycle-viewmodel-ktx = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifecycleViewmodelKtx" }
+androidx-fragment-ktx = { group = "androidx.fragment", name = "fragment-ktx", version.ref = "fragmentKtx" }
 
 [bundles]
 retrofit-moshi = ["retrofit", "moshi", "moshi-kotlin", "converter-moshi", "moshi-ksp"]
