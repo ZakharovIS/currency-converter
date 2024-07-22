@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Currency Converter</string>
+    <string name="Amount">Сумма</string>
+    <string name="Convert">Конвертировать</string>
 </resources>
