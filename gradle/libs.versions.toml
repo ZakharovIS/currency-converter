@@ -17,6 +17,7 @@ legacySupportV4 = "1.0.0"
 lifecycleLivedataKtx = "2.8.3"
 lifecycleViewmodelKtx = "2.8.3"
 fragmentKtx = "1.8.1"
+parcelize = "1.7.20"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -45,4 +46,5 @@ retrofit-moshi = ["retrofit", "moshi", "moshi-kotlin", "converter-moshi", "moshi
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
 jetbrainsKotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlinParcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "parcelize" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
