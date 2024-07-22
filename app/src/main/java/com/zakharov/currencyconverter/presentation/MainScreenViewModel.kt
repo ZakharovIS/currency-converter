@@ -13,10 +13,10 @@ class MainScreenViewModel(
     private val repository: Repository
 ) : ViewModel() {
 
-    private val convertFrom = CurrencyCode.RUB
-    private val convertTo = CurrencyCode.USD
+    private var convertFrom = CurrencyCode.RUB
+    private var convertTo = CurrencyCode.USD
 
-    private val amount = 500
+    private var amount: Double = 0.0
 
     private val _convertionResult = MutableStateFlow<Double?>(null)
     val convertionResult = _convertionResult.asStateFlow()
@@ -30,6 +30,20 @@ class MainScreenViewModel(
             ).exchangeRate * amount
             Log.d("conversionResult", "${convertionResult.value}")
         }
+    }
+
+    fun setConvertFrom(index: Int) {
+        convertFrom = CurrencyCode.entries[index]
+        Log.d("conversionResult", "$convertFrom")
+    }
+
+    fun setConvertTo(index: Int) {
+        convertTo = CurrencyCode.entries[index]
+        Log.d("conversionResult", "$convertTo")
+    }
+
+    fun setAmount(amount: Double) {
+        this.amount = amount
     }
 
     fun getCurrencyConvertFrom() = convertFrom.name

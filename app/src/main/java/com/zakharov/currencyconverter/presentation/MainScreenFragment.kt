@@ -47,26 +47,33 @@ class MainScreenFragment : Fragment() {
         }
 
         (binding.inputCurrencyEditText as? MaterialAutoCompleteTextView)?.setSimpleItems(items)
-
-        binding.inputCurrencyEditText.setOnItemClickListener { _, _, i, l ->
-            Log.d("Test dropdown", "${l}")
-        }
         binding.inputCurrencyEditText.setText(viewModel.getCurrencyConvertFrom(), false)
-        binding.btnConvert.setOnClickListener {
-            Log.d("Test dropdown", "${binding.inputCurrencyEditText.listSelection}")
+        binding.inputCurrencyEditText.setOnItemClickListener { _, _, _, itemIndex ->
+            viewModel.setConvertFrom(itemIndex.toInt())
         }
 
         (binding.outputCurrencyEditText as? MaterialAutoCompleteTextView)?.setSimpleItems(items)
-
-        binding.outputCurrencyEditText.setOnItemClickListener { _, _, i, l ->
-            Log.d("Test dropdown", "${l}")
-        }
         binding.outputCurrencyEditText.setText(viewModel.getCurrencyConvertTo(), false)
+        binding.outputCurrencyEditText.setOnItemClickListener { _, _, _, itemIndex ->
+            viewModel.setConvertTo(itemIndex.toInt())
+        }
+
+
         binding.btnConvert.setOnClickListener {
+
             viewModel.convert()
 
         }
 
         super.onViewCreated(view, savedInstanceState)
+    }
+
+    override fun onResume() {
+        binding.inputCurrencyEditText.setText(viewModel.getCurrencyConvertFrom(), false)
+        binding.outputCurrencyEditText.setText(viewModel.getCurrencyConvertTo(), false)
+        Log.d("conversionResult", viewModel.getCurrencyConvertFrom())
+        Log.d("conversionResult", viewModel.getCurrencyConvertTo())
+
+        super.onResume()
     }
 }
