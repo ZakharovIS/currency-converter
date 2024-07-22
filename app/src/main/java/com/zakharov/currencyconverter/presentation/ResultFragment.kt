@@ -2,12 +2,10 @@ package com.zakharov.currencyconverter.presentation
 
 import android.os.Build
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.annotation.RequiresApi
-import com.zakharov.currencyconverter.R
+import androidx.fragment.app.Fragment
 import com.zakharov.currencyconverter.data.entities.ResultModel
 import com.zakharov.currencyconverter.databinding.FragmentResultBinding
 

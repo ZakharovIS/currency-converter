@@ -1,11 +1,9 @@
 package com.zakharov.currencyconverter.presentation
 
-import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.zakharov.currencyconverter.data.Repository
 import com.zakharov.currencyconverter.data.entities.CurrencyCode
-import com.zakharov.currencyconverter.data.entities.ExchangeRateModel
 import com.zakharov.currencyconverter.data.entities.ResultModel
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.MutableStateFlow
