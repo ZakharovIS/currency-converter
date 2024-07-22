@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentation.ResultFragment">
+
+    <TextView
+        android:id="@+id/currency_from_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Исходная валюта:"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="200dp"
+        android:layout_marginStart="40dp"/>
+    <TextView
+        android:id="@+id/currency_to_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Конвертируем в:"
+        app:layout_constraintTop_toBottomOf="@id/currency_from_title"
+        app:layout_constraintStart_toStartOf="@id/currency_from_title"
+        android:layout_marginTop="20dp"
+        />
+    <TextView
+        android:id="@+id/currency_amount_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Сколько деняк"
+        app:layout_constraintTop_toBottomOf="@id/currency_to_title"
+        app:layout_constraintStart_toStartOf="@id/currency_to_title"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/currency_exchange_rate_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Курс обмена"
+        app:layout_constraintTop_toBottomOf="@id/currency_amount_title"
+        app:layout_constraintStart_toStartOf="@id/currency_amount_title"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/time_stamp_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Время"
+        app:layout_constraintTop_toBottomOf="@id/currency_exchange_rate_title"
+        app:layout_constraintStart_toStartOf="@id/currency_exchange_rate_title"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/result_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Результат"
+        app:layout_constraintTop_toBottomOf="@id/time_stamp_title"
+        app:layout_constraintStart_toStartOf="@id/time_stamp_title"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/currency_from"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RUB"
+        app:layout_constraintTop_toTopOf="@id/currency_from_title"
+        app:layout_constraintBottom_toBottomOf="@id/currency_from_title"
+        app:layout_constraintStart_toEndOf="@id/currency_from_title"
+        android:layout_marginStart="50dp"/>
+    <TextView
+        android:id="@+id/currency_to"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="USD"
+        app:layout_constraintTop_toTopOf="@id/currency_to_title"
+        app:layout_constraintBottom_toBottomOf="@id/currency_to_title"
+        app:layout_constraintStart_toStartOf="@id/currency_from"
+       />
+    <TextView
+        android:id="@+id/currency_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="300"
+        app:layout_constraintTop_toTopOf="@id/currency_amount_title"
+        app:layout_constraintBottom_toBottomOf="@id/currency_amount_title"
+        app:layout_constraintStart_toStartOf="@id/currency_from"/>
+
+    <TextView
+        android:id="@+id/currency_exchange_rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0.643554"
+        app:layout_constraintTop_toTopOf="@id/currency_exchange_rate_title"
+        app:layout_constraintBottom_toBottomOf="@id/currency_exchange_rate_title"
+        app:layout_constraintStart_toStartOf="@id/currency_from"/>
+
+    <TextView
+        android:id="@+id/time_stamp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Время"
+        app:layout_constraintTop_toTopOf="@id/time_stamp_title"
+        app:layout_constraintBottom_toBottomOf="@id/time_stamp_title"
+        app:layout_constraintStart_toStartOf="@id/currency_from"/>
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Результат"
+        app:layout_constraintTop_toTopOf="@id/result_title"
+        app:layout_constraintBottom_toBottomOf="@id/result_title"
+        app:layout_constraintStart_toStartOf="@id/currency_from"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

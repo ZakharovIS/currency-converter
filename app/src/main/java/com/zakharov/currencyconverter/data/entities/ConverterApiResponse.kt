@@ -5,22 +5,17 @@ import com.squareup.moshi.JsonClass
 
 @JsonClass(generateAdapter = true)
 data class ConverterApiResponse(
-    @Json(name = "success") val success: Boolean,
-    @Json(name = "query") val query: Query,
-    @Json(name = "info") val info: Info,
-    @Json(name = "date") val date: String,
-    @Json(name = "result") val result: Double
+    @Json(name = "meta") val meta: Meta,
+    @Json(name = "data") val data: Map<String, Currency>
 )
 
 @JsonClass(generateAdapter = true)
-data class Query(
-    @Json(name = "from") val from: String,
-    @Json(name = "to") val to: String,
-    @Json(name = "amount") val amount: Double
+data class Meta(
+    @Json(name = "last_updated_at") val last_updated_at: String
 )
 
 @JsonClass(generateAdapter = true)
-data class Info(
-    @Json(name = "timestamp") val timestamp: Long,
-    @Json(name = "rate") val rate: Double
+data class Currency(
+    @Json(name = "code") val currencyCode: String,
+    @Json(name = "value") val exchangeRate: Double
 )
